@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca de Livros - Biblioteca</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Biblioteca Digital</h1>
+            <p>Pesquise Por Título da Obra ou Nome do Autor</p>
+        </header>
+        <main>
+            <div class="search-box">
+                <input type="text" id="caixaDeBusca" placeholder="Ex: Machado de Assis ou 1984">
+                <button id="botaoDeBusca">Buscar</button>
+            </div>
+
+            <div class="show-authors">
+                <button id="showAuthors"> Listar Todos os Autores</button>
+            </div>
+
+            <div class="header-action">
+                <button id="btnNewBook">Adicionar um novo livro</button>
+            </div>
+
+            <div id="formCont" class="form-container hidden">
+                <h2 id="formTitle"> adicionar livro no catálago</h2>
+                <form id="bookForm">
+                    <input type="hidden" id="bookId">
+                    <div class="form-group">
+                        <label for="title">Titulo do livro</label>
+                        <input type="text" id="title" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="authors">ID do Autor do livro:</label>
+                        <input type="text" id="authors" required placeholder="Ex: 1, 3">
+                        <small>Consulte o banco pra verificar os IDs dos authores.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="genre">Gênero do livro:</label>
+                        <input type="text" id="genre">
+                    </div>
+
+                    <div class="form-group"></div>
+                    <label for="year">Ano de publicação do livro:</label>
+                    <input type="text" id="year">  
+                    </div>
+
+                    <div class="form-action">
+                        <button type="submit" id="btnSave">Salvar livro</button>
+                        <button type="button" id="btnCancel">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="resultados">
+                </div>
+                
+        </main>
+        <div></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
